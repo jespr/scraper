@@ -1,0 +1,17 @@
+<h1>Filter</h1>
+
+<%= form_tag scrape_create_url do %>
+  <p>
+    <%= label_tag :keywords %>
+    <%= text_field_tag :keywords, 'Emma' %>
+  </p>
+
+  <p>
+    <%= label_tag :urls %>
+    <%= text_area_tag :urls, 'https://kithnyc.myshopify.com/sitemap_products_1.xml', rows: 10 %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Scrape!' %>
+  </p>
+<% end %>

@@ -1,0 +1,8 @@
+<h1><%= pluralize(@products.length, "result") %> from '<%= @keywords %>'</h1>
+<% @products.each do |product| %>
+  <p>
+    <strong>URL:</strong> <%= product["loc"] %>
+    <strong>Title:</strong> <%= product["image:image"]["image:title"] %>
+    <%= image_tag product["image:image"]["image:loc"], width: 100 %>
+  </p>
+<% end %>
